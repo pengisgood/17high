@@ -52,7 +52,7 @@
     "eslint": "eslint src/**/*.jsx",
     "csslint": "sass-lint",
     "lint": "yarn eslint && yarn csslint",
-    "heroku-prebuild": "yarn install --save",
+    "heroku-prebuild": "npm install --only=dev",
     "server": "yarn clean-dist && yarn bundle && node server.js"
   },
   "jest": {
