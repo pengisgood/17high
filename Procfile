@@ -1,1 +1,1 @@
-web: yarn clean-dist && webpack && node server.js
+web: yarn server

@@ -46,12 +46,14 @@
     "start": "yarn clean-dist && webpack && webpack-dev-server --inline --hot",
     "bundle": "webpack",
     "clean-dist": "rm -rf public",
-    "server": "webpack-dev-server --inline --hot",
+    "dev-server": "webpack-dev-server --inline --hot",
     "test": "jest --coverage",
     "ci-test": "jest --coverage && nyc report --temp-directory=coverage --reporter=text-lcov | coveralls",
     "eslint": "eslint src/**/*.jsx",
     "csslint": "sass-lint",
-    "lint": "yarn eslint && yarn csslint"
+    "lint": "yarn eslint && yarn csslint",
+    "heroku-prebuild": "yarn install --save",
+    "server": "yarn clean-dist && yarn bundle && node server.js"
   },
   "jest": {
     "verbose": true,
